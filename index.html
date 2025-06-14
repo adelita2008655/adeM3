@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapaos de Moda</title>
+     <link href="inicio.css" rel="stylesheet" type="text/CSS"/>
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <center>
+    <em><h1 class="titulo" <div data-aos="zoom-in"></div>Zapatos a la Moda</h1></em>
+    </center>
+    <nav>
+        <a href="pagina1.html" class="">Zapatos para Hombre</a>
+        <a href="pagina2.html">Zapatos para Mujer</a>
+        <a href="pagina3.html">Zapatos para Niños</a>
+        <a href="graficas.html">Ventas Manuales del 2024</a>
+        <a href="grafica2.html"> Ventas Manuales del 2025
+            
+        </a>
+    </nav>
+
+        
+     <img src="inicio.jpg" alt="Descripción de la imagen" class="img-responsive" <div data-aos="flip-right"></div>
+     <center>
+       
+ <h1>Zapatos & Estilo</h1>
+
+    <div class="info">
+        <h2>Información sobre la Zapatería</h2>
+        <p><strong>Historia:</strong> Fundada en 2010, Zapatos & Estilo se ha convertido en un referente local en calzado de calidad.</p>
+        <p><strong>Productos:</strong> Ofrecemos zapatos para niños, hombres y mujeres, así como calzado deportivo y accesorios.</p>
+        <p><strong>Servicios:</strong> Asesoramiento personalizado y cuidado del calzado.</p>
+        <p><strong>Ubicación:</strong> [Dirección]</p>
+        <p><strong>Contacto:</strong> [Número:2371120153] | [Email:oropezaadela704@gmail.com]</p>
+    </div>  
+       
+    </script>
+
+  
+     </center>
+
+  <h2>Accesorios</h2>
+  <button id="btnClick" >Haz clic aquí</button>
+  <script>
+    document.getElementById("btnClick").addEventListener("click",function(){
+        alert("¡bienvenidos en accesorios!")
+        window.location.href="accesorios.html";
+    });
+  </script>
+
+  <!-- Evento input -->
+<h2>Escribe un Mensaje o una Recomendacion</h2>
+<input type="text" id="textoInput" placeholder="Mensaje">
+<p>Vista previa: <span id="preview"></span></p>
+
+<script>
+  // Seleccionamos el input y el elemento de vista previa
+  const textoInput = document.getElementById('textoInput');
+  const preview = document.getElementById('preview');
+
+  // Agregamos un evento 'input' al campo de texto
+  textoInput.addEventListener('input', function() {
+    // Actualizamos el contenido del span con el valor del input
+    preview.textContent = textoInput.value;
+  });
+</script>
+ <button id="btnClick" >Haz clic aquí</button>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+  AOS.init();
+</script>
+</body>
+</html>

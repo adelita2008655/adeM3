@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="accesorios.css" rel="stylesheet" type="text/CSS"/>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #cuadro {
+            display: inline-block; /* Para centrar la imagen */
+            transition: transform 0.3s; /* Transición suave para el efecto */
+        }
+        img {
+            width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+            border-radius: 10px; /* Bordes redondeados para un mejor 
+            specto */
+        }
+    </style>
+
+</head>
+<body>
+      <center>
+    <em><h1 class="titulo" <div data-aos="fade-left"></div>Accesorios</h1></em>
+    </center>
+
+    <canvas id="canvasLista" width="400" height="300"></canvas>
+
+<script>
+var canvas = document.getElementById("canvasLista");
+var ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "#ffffff"; 
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+ctx.font = "24px Arial";
+ctx.fillStyle = "#333333"; 
+ctx.fillText("Lista de Productos", 100, 30); 
+
+
+var productos = [
+    "1. Pulsera de cuero",
+    "2. Reloj inteligente",
+    "3. Gafas de sol",
+    "4. Bufanda de lana",
+    "5. Auriculares inalámbricos",
+    "6. Pendientes de plata",
+    "7. Mochila urbana",
+    "8. Correa para cámara"
+
+];
+
+
+ctx.font = "18px Arial";
+for (var i = 0; i < productos.length; i++) {
+    ctx.fillText(productos[i], 50, 70 + (i * 30));
+}
+</script>
+<center>
+<img src="accesorio.jpeg">
+  <!-- Evento submit -->
+  <h2>Enviar tu correo para hacerte descuento en cada calzado o cada accesorios </h2>
+  <form id="miFormulario">
+    <input type="text" placeholder="Correo" required>
+    <button type="submit">Enviar</button>
+  </form>
+ <script>
+  const miFormulario = document.getElementById('miFormulario');
+
+  miFormulario.addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+    const nombre = miFormulario.querySelector('input[type="text"]').value; // Obtiene el valor del campo de texto
+    alert(`¡Gracias, ${nombre}! Tu formulario ha sido enviado.`); // Muestra la alerta con el nombre
+
+    // Opcional: Reiniciar el formulario después de enviar
+    miFormulario.reset();
+  });
+</script>
+
+<h2>Zapatos de ModaS</h2>
+<div id="cuadro">
+    <img src="zapateria.jpeg" alt="Zapatos">
+</div>
+
+<script>
+    const cuadro = document.getElementById('cuadro');
+
+    cuadro.addEventListener('mouseover', function() {
+        cuadro.style.transform = 'scale(1.05)'; // Aumenta el tamaño al pasar el mouse
+    });
+
+    cuadro.addEventListener('mouseout', function() {
+        cuadro.style.transform = 'scale(1)'; // Vuelve al tamaño original al salir
+    });
+</script>
+
+   
+
+ <h2>Selecciona tu talla</h2>
+   <select id="tallaSelector">
+     <option value="">Selecciona una talla</option>
+     <option value="38">38</option>
+     <option value="39">39</option>
+     <option value="40">40</option>
+     <option value="41">41</option>
+   </select>
+
+   <script>
+     const tallaSelector = document.getElementById('tallaSelector');
+
+     tallaSelector.addEventListener('change', function() {
+       const tallaSeleccionada = tallaSelector.value;
+       if (tallaSeleccionada) {
+         alert(`Has seleccionado la talla ${tallaSeleccionada}. ¡Verifica la disponibilidad!`);
+       }
+     });
+   </script>
+
+   </script>
+
+
+
+
+
+ <section id="contacto">
+        <div class="contacto">
+            <style>
+                *{box-sizing: border-box;}
+                
+                        *{box-sizing: border-box;}
+                    
+                        form{
+                            width: 300px;
+                            padding: 16px;
+                            border-radius:10px;
+                            margin:auto;
+                            background-color: #325f8a;
+                        }
+       form label{
+                            width: 72px;
+                            font-weight:bold;
+                            display:inline-block;
+                        }
+                        form input[type="text"],
+                        form input[type="email"]{
+                            width: 180px;
+                            padding: 3px 10px;
+                            border: 1px solid #8a83f0;
+                            border-radius:3px;
+                            background-color:#61badd;
+                            margin: 8px 0;
+                            display:inline-block;
+                        }
+                        form input[type="submit"]{
+                                width:100%;
+                                padding: 8px 16px;
+                                margin: top 32px;
+                                border: 1px solid #8a83f0;
+                                border: radius 5px;
+                                display:block;
+                                color:#fff;
+                                background-color: #61badd;
+                            }
+          
+                    
+                            form input[type="submit"]:hover{
+                                cursor:pointer;
+                            }
+                    
+                            textarea{
+                                width: 100px;
+                                height: 100px;
+                                border:1px solid #8a83f0;
+                                border-radius:3px;
+                                background-color:#61badd;
+                                margin:8px 0;
+                                resize:none;
+                                display:block;
+                            }
+                    </style>
+                     
+        </div>
+    </section>
+
+    <center>
+        <a href="index.html">Regresar
+        </a>
+</center>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+  AOS.init();
+</script>
+</body>
+</html>

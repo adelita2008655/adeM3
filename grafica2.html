@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="grafica2.css" rel="stylesheet" type="text/CSS"/>
+</head>
+<body>
+    
+     <h1>Ventas Mensuales de Zapatería en 2025</h1>
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+
+    <script>
+         const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'];
+        const ventas = [1200, 1500, 1700, 1300, 1600, 1800];
+
+        
+        const anchoBarra = 50;
+        const espacioEntreBarras = 20;
+        const maxAltura = Math.max(...ventas);
+
+       
+        function dibujarGraficaBarras() {
+            for (let i = 0; i < ventas.length; i++) {
+                const alturaBarra = (ventas[i] / maxAltura) * (canvas.height - 50); 
+                ctx.fillStyle = '#4BC0C0';
+                ctx.fillRect(i * (anchoBarra + espacioEntreBarras), canvas.height - alturaBarra - 30, anchoBarra, alturaBarra);
+
+                ctx.fillStyle = 'black';
+                ctx.fillText(meses[i], i * (anchoBarra + espacioEntreBarras) + anchoBarra / 4, canvas.height - 10);
+            }
+        }
+
+       
+        dibujarGraficaBarras();
+    </script>
+</body>
+</html>

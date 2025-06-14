@@ -1,0 +1,39 @@
+body{
+    font-family: 'Poppins','sans-serif';
+    margin: 0;
+    padding: 0;
+    background-color: #d9aef0;
+    color: #bd8fe7;
+    text-align: center;
+}
+.titulo{
+    background: -webkit-linear-gradient(#8e4fd6,#9436f1);;
+    padding: 40px;
+    margin: 0;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: 'Times New Roman', 'Times New Roman', Times, serif;
+}
+body{
+    background: linear-gradient(rgb(181, 97, 230) 0%, rgb(169, 122, 245) 76%);
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0%;
+    background-attachment: fixed;
+}
+  
+body {
+   background-color: #930bbd; 
+    color: #9b94f3; 
+    font-family: Arial, sans-serif
+}
+
+h1 {
+    color: #1c1820;
+    text-align: center; 
+}
+
+p {
+    line-height: 1.6;
+    margin: 20px;
+}

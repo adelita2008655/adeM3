@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="pagina1.css" rel="stylesheet" type="text/CSS"/>
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+     <center>
+    <em><h1 class="titulo" <div data-aos="fade-right"></div>Zapatos de Hombres</h1></em>
+    </center>
+    
+    <section>
+        <h1 class="text" <div data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
+</div> Nuestra colección de calzado masculino está diseñada para aquellos que buscan un equilibrio perfecto entre estilo y confort. Desde elegantes zapatos formales hasta cómodas zapatillas deportivas, ofrecemos una variedad que se adapta a todas las ocasiones, ya sea en la oficina, en un evento especial o en tu tiempo libre.
+</h1>
+    <div class="producto">
+                  <h3>Calzado Deportivo</h3>
+            <img src="hombre1.jpg" alt="Producto 2">
+                 <p> Su material aparentemente cuero sintético o PU (poliuretano) en negro y blanco, con paneles superpuestos para un diseño más estructurado.  El blanco se centra en la zona de los dedos y parte del lateral, mientras que el negro domina el resto de la parte superior.</p>
+            <p>Precio: $1,500</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+                  <h3>Calzado Deportivo</h3>
+            <img src="hombre2.jpg" alt="Producto 2">
+            <p>Son calzado bajos (de caña baja), con cordones, de estilo casual y con una estética que combina diferentes materiales y colores</p>
+            <p>Precio: $2,000</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Calzado Deportivo</h3>
+            <img src="hombre3+.jpg" alt="Producto 2">
+            <p>Son calzado deportivas de hombre de caña alta, estilo casual, color beige claro o crema, con cordones y suela plana relativamente gruesa.</p>
+            <p>Precio: $9,000</p>
+            <button>Añadir al carrito</button>
+        </div>
+        <div class="producto">
+             <h3>Zapatos para Vestir</h3>
+            <img src="hombre4.jpg" alt="Producto 2">
+            <p>Esos son zapatos de vestir de charol negros para hombre.  Son zapatos de cordones, de punta redonda y con un acabado de charol brillante.  Se ven elegantes y apropiados para ocasiones formales.</p>
+            <p>Precio: $1,200</p>
+            <button>Añadir al carrito</button>
+        </div>
+         <div class="producto">
+             <h3>Zapatos para Vestir</h3>
+            <img src="hombre5.jpg" alt="Producto 2">
+            <p>un zapato de gamuza negra, con cordones, de estilo clásico y formal.  Tiene una suela de goma y un diseño relativamente sencillo y elegante, adecuado para ocasiones semi-formales o formales.</p>
+            <p>Precio: $4,500</p>
+            <button>Añadir al carrito</button>
+        </div>
+
+    </section>
+      <canvas id="canvasLista" width="400" height="300"></canvas>
+
+<script>
+var canvas = document.getElementById("canvasLista");
+var ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "#ffffff"; 
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+ctx.font = "24px Arial";
+ctx.fillStyle = "#333333"; 
+ctx.fillText("Tipos de Marcas", 100, 30); 
+
+
+var productos = [
+    "1. Nike",
+    "2. Adidas",
+    "3. Clarks",
+    "4. Dr. Martens",
+    "5. Timberland",
+    "6. Steve Madden",
+    "7. Geox",
+    "8. Puma"
+
+];
+
+
+ctx.font = "18px Arial";
+for (var i = 0; i < productos.length; i++) {
+    ctx.fillText(productos[i], 50, 70 + (i * 30));
+}
+</script>
+     <section id="contacto">
+        <div class="contacto">
+            <style>
+                *{box-sizing: border-box;}
+                
+                        *{box-sizing: border-box;}
+                    
+                        form{
+                            width: 300px;
+                            padding: 16px;
+                            border-radius:10px;
+                            margin:auto;
+                            background-color: #325f8a;
+                        }
+                        form label{
+                            width: 72px;
+                            font-weight:bold;
+                            display:inline-block;
+                        }
+                        form input[type="text"],
+                        form input[type="email"]{
+                            width: 180px;
+                            padding: 3px 10px;
+                            border: 1px solid #8a83f0;
+                            border-radius:3px;
+                            background-color:#61badd;
+                            margin: 8px 0;
+                            display:inline-block;
+                        }
+                        form input[type="submit"]{
+                                width:100%;
+                                padding: 8px 16px;
+                                margin: top 32px;
+                                border: 1px solid #8a83f0;
+                                border: radius 5px;
+                                display:block;
+                                color:#fff;
+                                background-color: #61badd;
+                            }
+                    
+                            form input[type="submit"]:hover{
+                                cursor:pointer;
+                            }
+                    
+                            textarea{
+                                width: 100px;
+                                height: 100px;
+                                border:1px solid #8a83f0;
+                                border-radius:3px;
+                                background-color:#61badd;
+                                margin:8px 0;
+                                resize:none;
+                                display:block;
+                            }
+                    </style>
+                     
+        </div>
+    </section>
+
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    header {
+        background: #35424a;
+        color: #ffffff;
+        padding: 10px 0;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+    nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .producto {
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            background-color: #ffffff;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .producto img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #35424a;
+            color: white;
+        }
+    </style>
+    <center>
+        <a href="index.html">Regresar
+        </a>
+    </center>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+  AOS.init();
+</script>
+</body>
+</html>
